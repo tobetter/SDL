@@ -48,7 +48,7 @@ typedef struct
 #define SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC NULL
 #endif
 #ifndef SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM
-#define SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM "libmali.so.0"
+#define SDL_VIDEO_DRIVER_KMSDRM_DYNAMIC_GBM "libmali.so"
 #endif
 
 static kmsdrmdynlib kmsdrmlibs[] = {

@@ -36,7 +36,9 @@ Build-Depends:
  libxxf86vm-dev,
  pkg-config,
  libsamplerate0-dev,
- wayland-protocols
+ wayland-protocols,
+ libdrm-dev,
+ libgbm-dev
 Build-Depends-Indep:
  doxygen <!nodoc>
 Vcs-Git: https://salsa.debian.org/sdl-team/libsdl2.git
