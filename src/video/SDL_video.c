@@ -485,7 +485,15 @@ SDL_VideoInit(const char *driver_name)
     index = 0;
     video = NULL;
     if (driver_name == NULL) {
-        driver_name = SDL_getenv("SDL_VIDEODRIVER");
+        const char *session_type = SDL_getenv("XDG_SESSION_TYPE");
+        if (session_type != NULL) {
+            if (SDL_strcmp(session_type, "tty") != 0) {
+                driver_name = session_type;
+            }
+        }
+        if (driver_name == NULL) {
+            driver_name = SDL_getenv("SDL_VIDEODRIVER");
+        }
     }
     if (driver_name != NULL) {
         for (i = 0; bootstrap[i]; ++i) {
